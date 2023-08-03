@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5DB6B4"
+    android:gravity="center">
+
+    <TextView
+        android:layout_alignStart="@id/card_view_todo"
+        android:id="@+id/text_view_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="The Bucket List App"
+        android:textColor="#042DFA"
+        android:textSize="30sp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_todo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view_title"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="20dp">
+
+        <ImageView
+            android:id="@+id/image_view_todo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/todo" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_travel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view_title"
+        android:layout_margin="20dp"
+        android:layout_toRightOf="@id/card_view_todo"
+        app:cardCornerRadius="20dp">
+
+        <ImageView
+            android:id="@+id/image_view_travel"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+
+            android:scaleType="centerCrop"
+            android:src="@drawable/travel" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+
+        android:id="@+id/text_view_todo_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card_view_todo"
+        android:layout_alignLeft="@id/card_view_todo"
+        android:fontFamily="sans-serif-medium"
+        android:text="Things to do"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/text_view_travel_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/card_view_todo"
+        android:layout_alignLeft="@id/card_view_travel"
+        android:fontFamily="sans-serif-medium"
+        android:text="Places to go"
+        android:textSize="20sp" />
+
+</RelativeLayout>
